@@ -295,7 +295,7 @@ async def save_pages(message: types.Message, state: FSMContext):
         await message.answer(
             f"✅ *{pages} sahifa* saqlandi!\n\n"
             f"📊 Jami: *{total}/604* sahifa ({progress}%)\n\n"
-            f"{'🎉 Tabriklaymiz! Xatm qildingiz!' if total >= 604 else '💪 Davom eting, zo'r ketayapsiz!'}",
+            f"{'🎉 Tabriklaymiz! Xatm qildingiz!' if total >= 604 else '💪 Davom eting, zor ketayapsiz!'}",
             parse_mode="Markdown",
             reply_markup=main_keyboard()
         )
