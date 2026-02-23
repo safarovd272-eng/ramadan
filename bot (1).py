@@ -14,7 +14,7 @@ import os
 # =============================================
 # SOZLAMALAR - BU YERGA O'Z TOKEN'INGIZNI YOZING
 # =============================================
-BOT_TOKEN = "BU_YERGA_BOT_TOKEN_YOZING"  # @BotFather dan olingan token
+BOT_TOKEN = "8600972603:AAGadjIviGBAZAXY8JKYzddbjGFBi_-4PXQ"  # @BotFather dan olingan token
 
 # =============================================
 # MA'LUMOTLAR BAZASI (JSON fayl)
@@ -57,11 +57,27 @@ CITIES = {
 # DUOLAR
 # =============================================
 DUOLAR = [
-    "🤲 Imsok duosi:\n«Allohim, sening rizoying uchun ro'za tutdim, Senga tavakkal qildim va Sening rizqingdan iftор qilaman»",
-    "🤲 Iftor duosi:\n«Allohumma laka sumtu va bika aamantu va alayka tavakkaltu va ala rizqika aftartu»\n\nMa'nosi: «Allohim, Sening uchun ro'za tutdim, Senga imo keltirdim, Senga tavakkal qildim va Sening rizqing bilan iftor qildim»",
-    "🌙 Hadis:\n«Kim Ramazonda imon va ehtisob bilan ro'za tutsa, uning o'tgan gunohlari kechiriladi» (Buxoriy)",
-    "✨ Hadis:\n«Jannat eshiklari Ramazonda ochiladi, Jahannam eshiklari yopiladi va shaytонlar kishanlanadi» (Buxoriy, Muslim)",
-    "🤲 Kechqurun duosi:\n«Robbana atina fid-dunya hasanatan va fil-aaxirati hasanatan va qina azaaban-naar»",
+    (
+        "🌅 *Saharlik (og'iz yopish) duosi:*\n\n"
+        "«Navaytu an asuuma savma shahri ramazona minal-fajri ilal-mag'ribi, "
+        "xolisan lillahi ta'aalaa. Allohu akbar»\n\n"
+        "📖 *Ma'nosi:* «Ramazon oyining ro'zasini subhdan to kun botguncha "
+        "xolis Alloh taolo uchun tutishni niyat qildim. Alloh buyukdir»"
+    ),
+    (
+        "🌇 *Iftorlik (og'iz ochish) duosi:*\n\n"
+        "«Allohumma laka sumtu va bika aamantu va 'alayka tavakkaltu "
+        "va 'alaa rizqika aftartu, fag'firliy maa qoddamtu va maa "
+        "axxortu birohmatika yaa arhamar roohimiyn»\n\n"
+        "📖 *Ma'nosi:* «Ey Alloh, ushbu ro'zamni Sen uchun tutdim, "
+        "Senga iymon keltirdim, Senga tavakkal qildim va Sening "
+        "rizqing bilan iftor qildim. O'tgan va keyingi (gunohlarimni) "
+        "rahmatingg bilan mag'firat qilgin, ey rahm qiluvchilarning "
+        "rahmlisi!»"
+    ),
+    "🌙 *Hadis:*\n«Kim Ramazonda imon va ehtisob bilan ro'za tutsa, uning o'tgan gunohlari kechiriladi» (Buxoriy)",
+    "✨ *Hadis:*\n«Jannat eshiklari Ramazonda ochiladi, Jahannam eshiklari yopiladi va shaytонlar kishanlanadi» (Buxoriy, Muslim)",
+    "🤲 *Kechqurun duosi:*\n«Robbana atina fid-dunya hasanatan va fil-aaxirati hasanatan va qina azaaban-naar»\n\n📖 *Ma'nosi:* «Parvardigorimiz, bizga dunyoda ham, oxiratda ham yaxshilik ato et va bizni do'zax azobidan saqlа»",
 ]
 
 OYATLAR = [
@@ -227,7 +243,8 @@ async def send_dua(message: types.Message):
     await message.answer(
         f"{content}\n\n"
         "━━━━━━━━━━━━━━━\n"
-        "🔄 Yana dua olish uchun qayta bosing"
+        "🔄 Yana dua olish uchun qayta bosing",
+        parse_mode="Markdown"
     )
 
 @dp.message(F.text == "📖 Qur'on tracker")
